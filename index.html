@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rick and Morty</title>
+	<meta charset="utf-8">
+	<meta name="og:title" content="Rick and Morty characters">
+	<meta name="og:description" content="Лучший ресурс с персонажами из сериала Рик и Морти">
+	<meta name="og:image" content="https://www.google.com/url?sa=i&url=https%3A%2F%2Ftoybook.com%2Fnew-licensing-and-merchandising-partnerships-for-adult-swims-rick-and-morty-revealed%2F&psig=AOvVaw1JWs3j-N-u7OO6X7MVifKI&ust=1617015312712000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPC7sNrp0u8CFQAAAAAdAAAAABAJ">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/hero.css">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/lib/bootstrap-reboot.min.css">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/lib/bootstrap.min.css">
+</head>
+<body style="background-color: #000;">
+	<!-- <header>
+		<nav class="navbar navbar-dark bg-dark">
+		  <div class="container-fluid">
+		    <span class="navbar-brand mb-0 h1">Navbar</span>
+		  </div>
+		</nav>
+	</header> -->
+
+	<section class="text-center text-white pt-5 pb-5 hero">
+		<div class="container">
+			<img src="./assets/img/logo.png" alt="Rick and Morty logo" class="hero__logo" style="max-width: 75%;">
+			<h2 class="pt-3 pb-4">Все персонажи вселенной на одном сайте</h2>
+			<div class="row g-3">
+			  <div class="col-sm">
+			    <input type="text" class="form-control" placeholder="Name" aria-label="Name" id="searchName">
+			  </div>
+			  <div class="col-sm">
+			    <select class="form-select" aria-label="Default select example" id="searchStatus">
+				  <option selected value="">Статус не важен</option>
+				  <option value="alive">Жив</option>
+				  <option value="dead">Мертв</option>
+				  <option value="unknown">Неизвестно</option>
+				</select>
+			  </div>
+			  <div class="col-sm">
+			    <select class="form-select" aria-label="Default select example" id="searchGender">
+				  <option selected value="">Гендер не важен</option>
+				  <option value="male">Муж</option>
+				  <option value="female">Жен</option>
+				  <option value="genderless">Бесполое</option>
+				  <option value="unknown">Неизвестно</option>
+				</select>
+			  </div>
+			  <div class="col-sm">
+				<button type="button" class="btn" id="searchCharecter" 
+				style="
+				width: 100%; 
+				background-color: #97CE4C; 
+				border-color: #97CE4C;"
+				onclick="cl(), showCards()">Найти</button>
+			</div>
+			</div>
+		</div>
+	</section>
+
+		<div class="container">
+			<h3 class="text-center text-white" id="js-allCharacters"></h3>
+		</div>
+
+	<section class=" pb-5 characters">
+		<div class="container d-flex flex-column">
+			<h2 class="pt-4 text-center text-white">Персонажи</h2>
+			<p class="character-count text-center" style="color: white;"></p>
+			<div class="row" id="charactersList"></div>
+			<button class="show-more btn btn-primary" id="js-more" onclick="showMoreCharacters()"></button>
+		</div>
+	</section>	
+	<script type="text/javascript" src="./assets/scripts/lib/axios.min.js"></script>
+	<script type="text/javascript" src="./assets/scripts/app.js"></script>
+</body>
+</html>

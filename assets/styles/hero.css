@@ -1,0 +1,26 @@
+.hero__logo {
+	max-width: 540px;
+}
+
+.life__trigger {
+	border-radius: 50%;
+	width: 7px;
+	height: 7px;
+	background-color: #28ff2f;
+}
+
+.life__trigger.-dead {
+	background-color: #f30202;
+}
+
+.life__trigger.-unknown {
+	background-color: #ffdd00;
+}
+
+.show-more {
+	display: block;
+}
+
+.show-more.-hide {
+	display: none;
+}
